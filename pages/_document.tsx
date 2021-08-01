@@ -1,8 +1,7 @@
-import * as React from "react";
-
 import Document, { Head, Html, Main, NextScript } from "next/document";
 
-import ServerStyleSheets from "@material-ui/styles/ServerStyleSheets";
+import React from "react";
+import { ServerStyleSheets } from "@material-ui/core/styles";
 import theme from "../styles/theme";
 
 export default class MyDocument extends Document {
@@ -31,7 +30,7 @@ export default class MyDocument extends Document {
 }
 
 // `getInitialProps` belongs to `_document` (instead of `_app`),
-// it's compatible with static-site generation (SSG).
+// it's compatible with server-side generation (SSG).
 MyDocument.getInitialProps = async (ctx) => {
   // Resolution order
   //

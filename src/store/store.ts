@@ -1,8 +1,13 @@
+import { appReducer } from "./app";
 import { configureStore } from "@reduxjs/toolkit";
+import { expoReducer } from "./expo";
 
 function makeStore() {
   return configureStore({
-    reducer: {},
+    reducer: {
+      app: appReducer,
+      expo: expoReducer,
+    },
   });
 }
 

@@ -1,4 +1,3 @@
-import { Footer } from "./Footer";
 import { Header } from "./Header";
 import React from "react";
 import { makeStyles } from "@material-ui/core";
@@ -21,7 +20,6 @@ export const DefaultTemplate: React.FC = ({ children }) => {
     <div className={styles.root}>
       <Header />
       <main className={styles.mainContent}>{children}</main>
-      <Footer />
     </div>
   );
 };

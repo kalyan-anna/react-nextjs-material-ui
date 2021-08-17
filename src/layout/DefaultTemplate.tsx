@@ -13,7 +13,7 @@ const useStyles = makeStyles({
   },
   mainContent: {
     flexGrow: 2,
-    backgroundColor: "rgba(232, 234, 246, 1)",
+    backgroundColor: "#FCEEEC",
     paddingTop: "1rem",
   },
 });

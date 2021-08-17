@@ -1,7 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 import { Box } from "@material-ui/core";
-import Image from "next/image";
 import Link from "next/link";
-import logoPng from "../../public/assets/logo.png";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
@@ -10,6 +9,8 @@ const useStyles = makeStyles((theme) => ({
   },
   logo: {
     marginLeft: "15px",
+    width: "50px",
+    height: "50px",
   },
   appTitle: {
     textTransform: "uppercase",
@@ -35,12 +36,10 @@ export const AppLogo = () => {
     <Link href="/">
       <a className={classes.root}>
         <Box flexDirection="row" alignItems="center" display="flex">
-          <Image
-            src={logoPng}
+          <img
+            src="/assets/logo.png"
             alt="BixExpo logo"
             className={classes.logo}
-            width="50px"
-            height="50px"
           />
           <span className={classes.appTitle}>
             SSR <small>vs</small> SSG

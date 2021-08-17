@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     color: "#413839",
     textShadow: "2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c",
     [theme.breakpoints.up("sm")]: {
-      marginLeft: "-120px",
+      marginLeft: "-140px",
     },
   },
 }));

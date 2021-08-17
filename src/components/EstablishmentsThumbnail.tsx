@@ -13,9 +13,6 @@ import React from "react";
 
 const useStyles = makeStyles({
   root: {
-    width: "100%",
-    maxWidth: "320px",
-    height: "120px",
     backgroundColor: "#413839",
     color: "#fff",
   },

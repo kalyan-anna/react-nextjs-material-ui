@@ -10,12 +10,14 @@ export interface Establishment {
 }
 
 export interface ExpoState {
+  isLoaded: boolean;
   establishments: {
     [id: string]: Establishment;
   };
 }
 
 const initialState: ExpoState = {
+  isLoaded: false,
   establishments: {},
 };
 
@@ -26,6 +28,7 @@ const expoSlice = createSlice({
   extraReducers: {
     [loadEstablishments.fulfilled.type]: (state, { payload }) => {
       state.establishments = payload.establishments;
+      state.isLoaded = true;
     },
   },
 });

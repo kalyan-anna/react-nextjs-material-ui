@@ -6,6 +6,7 @@ export interface Establishment {
   name: string;
   image: string;
   stallNumber: string;
+  detail: string;
 }
 
 export interface ExpoState {

@@ -1,5 +1,6 @@
 import { useAppDispatch, useAppSelector } from "../store";
 
+import { LandingPageDetail } from "../components";
 import { expoSelectors } from "../store/expo/selectors";
 import { loadEstablishments } from "../store/expo";
 import { useEffect } from "react";
@@ -12,12 +13,5 @@ export default function Home() {
     dispatch(loadEstablishments());
   }, [dispatch]);
 
-  return (
-    <>
-      <div>landing page</div>
-      {establishments.map((est) => (
-        <div key={est.id}>{est.name}</div>
-      ))}
-    </>
-  );
+  return <LandingPageDetail />;
 }

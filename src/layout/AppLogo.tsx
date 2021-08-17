@@ -1,3 +1,4 @@
+import { BASE_PATH } from "../utils/config.helper";
 /* eslint-disable @next/next/no-img-element */
 import { Box } from "@material-ui/core";
 import Link from "next/link";
@@ -37,7 +38,7 @@ export const AppLogo = () => {
       <a className={classes.root}>
         <Box flexDirection="row" alignItems="center" display="flex">
           <img
-            src="/assets/logo.png"
+            src={`${BASE_PATH}/assets/logo.png`}
             alt="BixExpo logo"
             className={classes.logo}
           />

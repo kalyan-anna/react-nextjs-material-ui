@@ -1,8 +1,8 @@
-import { EstablishmentsThumbnail } from "./EstablishmentsThumbnail";
+import { Container, makeStyles } from "@material-ui/core";
+
+import { EstablishmentListSection } from "./EstablishmentListSection";
 import React from "react";
 import { expoSelectors } from "../store/expo/selectors";
-import { makeStyles } from "@material-ui/core";
-import { motion } from "framer-motion";
 import { useAppSelector } from "../store";
 
 const useStyles = makeStyles({
@@ -24,39 +24,14 @@ const useStyles = makeStyles({
   },
 });
 
-const container = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-};
-
-const item = {
-  hidden: { opacity: 0 },
-  show: { opacity: 1 },
-};
-
 export const LandingPageDetail = () => {
   const styles = useStyles();
 
   const establishments = useAppSelector(expoSelectors.establishments);
 
   return (
-    <motion.div
-      variants={container}
-      initial="hidden"
-      animate="show"
-      className={styles.root}
-    >
-      <h1>Establishments</h1>
-      {establishments.map((est) => (
-        <motion.div variants={item} key={est.id} className={styles.estItem}>
-          <EstablishmentsThumbnail est={est} />
-        </motion.div>
-      ))}
-    </motion.div>
+    <Container>
+      <EstablishmentListSection establishments={establishments} />
+    </Container>
   );
 };

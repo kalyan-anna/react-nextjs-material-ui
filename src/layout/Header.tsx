@@ -36,7 +36,7 @@ export const Header = () => {
       className={classes.root}
       px={1}
     >
-      <AppLogo />
+      {/* <AppLogo /> */}
       <span className={classes.siteTitle}>Static Site Generation</span>
       <span></span>
     </Box>

@@ -10,7 +10,13 @@ const establishments = createSelector(selectExpoState, (state) =>
 const establishmentById = (id: string) =>
   createSelector(selectExpoState, (state) => state.establishments[id]);
 
+const isLoaded = createSelector(
+  selectExpoState,
+  (state) => state.isAlreadyLoaded
+);
+
 export const expoSelectors = {
   establishments,
   establishmentById,
+  isLoaded,
 };

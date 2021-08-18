@@ -1,10 +1,20 @@
-import { AsyncThunkPayloadCreator, createAsyncThunk } from "@reduxjs/toolkit";
+import {
+  AsyncThunkOptions,
+  AsyncThunkPayloadCreator,
+  createAsyncThunk,
+} from "@reduxjs/toolkit";
 
-export function createAsyncThunkWithError<Returned, ThunkArg = void>(
+export function createAsyncThunkWithError<
+  Returned,
+  ThunkArg = void,
+  Config = {}
+>(
   typePrefix: string = "",
-  payloadCreator: AsyncThunkPayloadCreator<Returned, ThunkArg, {}>
+  payloadCreator: AsyncThunkPayloadCreator<Returned, ThunkArg, {}>,
+  options?: AsyncThunkOptions<ThunkArg, Config>
 ) {
   return createAsyncThunk<Returned, ThunkArg>(typePrefix, payloadCreator, {
+    ...options,
     serializeError: (error: any) => {
       return {
         data: error.response?.data,

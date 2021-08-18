@@ -15,6 +15,9 @@ const useStyles = makeStyles({
   root: {
     backgroundColor: "#413839",
     color: "#fff",
+    width: "320px",
+    maxWidth: "320px",
+    height: "120px",
   },
   estName: {
     fontSize: "1.2rem",

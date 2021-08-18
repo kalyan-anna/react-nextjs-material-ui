@@ -1,6 +1,7 @@
 import { Container, makeStyles } from "@material-ui/core";
 
 import { EstablishmentListSection } from "./EstablishmentListSection";
+import { MetricsSection } from "./MetricsSection";
 import React from "react";
 import { expoSelectors } from "../store/expo/selectors";
 import { useAppSelector } from "../store";
@@ -31,6 +32,7 @@ export const LandingPageDetail = () => {
 
   return (
     <Container>
+      <MetricsSection />
       <EstablishmentListSection establishments={establishments} />
     </Container>
   );

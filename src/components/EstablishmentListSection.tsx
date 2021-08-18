@@ -6,10 +6,6 @@ import { makeStyles } from "@material-ui/core";
 import { motion } from "framer-motion";
 
 const useStyles = makeStyles({
-  root: {
-    padding: "20px",
-  },
-
   header: {
     color: "#413839",
     marginBottom: "10px",
@@ -48,12 +44,7 @@ export const EstablishmentListSection: React.FC<EstablishmentListSectionProps> =
     const styles = useStyles();
 
     return (
-      <motion.section
-        variants={container}
-        initial="hidden"
-        animate="show"
-        className={styles.root}
-      >
+      <motion.section variants={container} initial="hidden" animate="show">
         <h1 className={styles.header}>Establishments</h1>
         <div className={styles.listContainer}>
           {establishments.map((est) => (

@@ -27,6 +27,7 @@ const setFCP = (value: number) => {
 };
 
 const setLCP = (value: number) => {
+  console.log("...setting LCP....", value);
   lcpValue = value;
 };
 
